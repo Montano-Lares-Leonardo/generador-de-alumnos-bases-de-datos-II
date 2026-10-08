@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charser="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de alumnos</title>
+    <script src="js/functions.js">
+
+    </script>
+</head>
+
+<body style="padding-top: 100px; padding-bottom: 100px; background-image: url(ocean.png); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <center><div style="background-color: darkslateblue; color: lightskyblue; opacity: 0.8; width: 800px; padding: 50px;"><center>
+        <h1>Generador automatico de registros</h1>
+        numero de registros: <input type="number" id="registros" value="1" min="1" max="50000" style="background-color: lightskyblue; color: darkslateblue;"><br>
+        <input type="button" value="Registros: 1" onclick="document.getElementById('registros').value=1" style="background-color: lightskyblue; color: darkslateblue;">
+        <input type="button" value="Resgistros: 50000" onclick="document.getElementById('registros').value=50000" style="background-color: lightskyblue; color: darkslateblue;"><br>
+        Tipo de archivo <select id="opcion" style="background-color: lightskyblue; color: darkslateblue;">
+            <option value="1">MySQL / MariaDB</option>
+            <option value="2">PostgreSQL</option>
+            <option value="3">CSV</option>
+            <option value="4">JSON</option>
+        </select>
+        <br><input type="button" value="Generar" onclick="generar()" style="background-color: lightskyblue; color: darkslateblue;">
+        <input type="button" value="Guardar" onclick="generarArchivo()" style="background-color: lightskyblue; color: darkslateblue;">
+        <div style="text-align: left;"><p id="salida"></p></div>
+    </center></div></center>
+</body>
+
+</html>
